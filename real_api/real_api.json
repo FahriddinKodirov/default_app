@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "8f489c99-bac3-475a-adf1-31723ff218ef",
+		"name": "ZaminEducation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21894643"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"login\": \"Ibrohim\",\n  \"password\": \"qwerty12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/auth/login",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "create course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2OGUzZWJmZC1iMTZlLTRkMzUtYmIxZi1lZjQ2YTkxYzU1MjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk3MjQ0OSwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.fZgcMpVd_Y2t1BiKC_5oZzN3AK1UeKt8AEkM4pMW_zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\":\"Backend course\",\n    \"CategoryId\":6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select all of course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2OGUzZWJmZC1iMTZlLTRkMzUtYmIxZi1lZjQ2YTkxYzU1MjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk3MjQ0OSwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.fZgcMpVd_Y2t1BiKC_5oZzN3AK1UeKt8AEkM4pMW_zc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Ibrohim\",\n    \"lastName\": \"To'xtasinov\",\n    \"username\": \"Ibrohim\",\n    \"password\": \"qwerty12\",\n    \"addressId\": null,\n    \"bio\": \"Just bio\",\n    \"gender\": 0,\n    \"dateOfBirth\": \"2023-02-16T07:52:45.759Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/users/",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWZhYTBhYi01Y2I1LTQwYzktYmY2MS04YzRhOWMwOGMwYzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk5NTMxMiwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.CNCdFifhrgL_LlVm0zbD5sZX4slZ0cPz3qaEo_HJq60",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/users",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWZhYTBhYi01Y2I1LTQwYzktYmY2MS04YzRhOWMwOGMwYzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk5NTMxMiwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.CNCdFifhrgL_LlVm0zbD5sZX4slZ0cPz3qaEo_HJq60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/users/21",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"users",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update api",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWZhYTBhYi01Y2I1LTQwYzktYmY2MS04YzRhOWMwOGMwYzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk5NTMxMiwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.CNCdFifhrgL_LlVm0zbD5sZX4slZ0cPz3qaEo_HJq60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Ibrohimbek\",\n  \"lastName\": \"Falonchiyev\",\n  \"username\": \"Ibrohimbek\",\n  \"bio\": \"I am a student\",\n  \"gender\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/users/?id=21",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2OGUzZWJmZC1iMTZlLTRkMzUtYmIxZi1lZjQ2YTkxYzU1MjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk3MjQ0OSwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.fZgcMpVd_Y2t1BiKC_5oZzN3AK1UeKt8AEkM4pMW_zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Java\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course/category",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2OGUzZWJmZC1iMTZlLTRkMzUtYmIxZi1lZjQ2YTkxYzU1MjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk3MjQ0OSwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.fZgcMpVd_Y2t1BiKC_5oZzN3AK1UeKt8AEkM4pMW_zc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course/category",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete single category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWZhYTBhYi01Y2I1LTQwYzktYmY2MS04YzRhOWMwOGMwYzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk5NTMxMiwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.CNCdFifhrgL_LlVm0zbD5sZX4slZ0cPz3qaEo_HJq60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course/category/5",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course",
+								"category",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update single category by name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWZhYTBhYi01Y2I1LTQwYzktYmY2MS04YzRhOWMwOGMwYzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMiIsImV4cCI6MTY3Njk5NTMxMiwiaXNzIjoiemFtaW5lZHVjYXRpb24gYXBpIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDozNjE0NS8ifQ.CNCdFifhrgL_LlVm0zbD5sZX4slZ0cPz3qaEo_HJq60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Flutter\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zamineducation.visualstudio.uz/api/course/category/3",
+							"protocol": "https",
+							"host": [
+								"zamineducation",
+								"visualstudio",
+								"uz"
+							],
+							"path": [
+								"api",
+								"course",
+								"category",
+								"3"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
